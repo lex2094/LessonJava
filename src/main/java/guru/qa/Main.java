@@ -4,13 +4,14 @@ import guru.qa.core.Application;
 import guru.qa.core.TaxDateCalculator;
 import guru.qa.data.InMemoryEmployeeRepository;
 import guru.qa.io.ConsoleIO;
+import guru.qa.io.GuiIO;
 
 import java.text.ParseException;
 
 public class Main {
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) {
         new Application(
-                new ConsoleIO(
+                new GuiIO(
                         new InMemoryEmployeeRepository()
                 ),
                 new TaxDateCalculator()

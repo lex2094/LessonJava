@@ -19,6 +19,6 @@ public class Application {
         Employee employee = io.readEmployee();
         io.inputDepartureDate(employee);
         taxDateCalculator.calculateTaxResidenceLostDate(employee);
-        io.printEmployee("Дата потери резиднества ", employee);
+        io.printEmployee("Результат ", employee);
     }
 }

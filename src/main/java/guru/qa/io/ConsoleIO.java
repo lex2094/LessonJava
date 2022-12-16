@@ -41,10 +41,10 @@ public class ConsoleIO implements IO{
     public void printEmployee(String message, Employee employee) {
         String msg = employee.getDateOfLoseTaxResidence() == null
                 ? message + employee.getName() + " " + employee.getSurName()
-                : message + employee.getName() + " " + employee.getSurName() + "Дата потери резиденства" +
+                : message + employee.getName() + " " + employee.getSurName() + " Дата потери резиденства " +
                 employee.getDateOfLoseTaxResidence();
 
-        System.out.println(message + employee.getName() + " " + employee.getSurName());
+        System.out.println(msg);
     }
 
     @Override
