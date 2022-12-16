@@ -9,6 +9,7 @@ public class Employee {
     private String name;
     private String surName;
     private Date departureDate;
+    private Date dateOfLoseTaxResidence;
 
     public Employee(String name, String surName) {
         this.name = name;
@@ -51,5 +52,13 @@ public class Employee {
 
     public void setDepartureDate(Date departureDate) {
         this.departureDate = departureDate;
+    }
+
+    public Date getDateOfLoseTaxResidence() {
+        return dateOfLoseTaxResidence;
+    }
+
+    public void setDateOfLoseTaxResidence(Date dateOfLoseTaxResidence) {
+        this.dateOfLoseTaxResidence = dateOfLoseTaxResidence;
     }
 }

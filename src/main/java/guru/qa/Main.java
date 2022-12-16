@@ -1,16 +1,21 @@
 package guru.qa;
 
 import guru.qa.core.Application;
+import guru.qa.core.TaxDateCalculator;
+import guru.qa.data.InMemoryEmployeeRepository;
+import guru.qa.io.ConsoleIO;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws ParseException {
-        new Application().run();
+        new Application(
+                new ConsoleIO(
+                        new InMemoryEmployeeRepository()
+                ),
+                new TaxDateCalculator()
+
+        ).run();
 //        Scanner sc = new Scanner(System.in);
 //        System.out.println("Введите имя сотрудника");
 //        String name = sc.nextLine();
